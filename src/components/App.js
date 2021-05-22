@@ -2,15 +2,7 @@ import React, { Component, useState } from "react";
 import "../styles/App.css";
 
 const App = () => {
-  var arr = [
-    "Siblings",
-    "Friends",
-    "Love",
-    "Affection",
-    "Marriage",
-    "Enemy",
-    "Please Enter valid input"
-  ];
+  var arr = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enemy"];
   const [getrel, setRel] = useState();
 
   const calRelation = () => {
@@ -35,7 +27,7 @@ const App = () => {
       let l2 = Number(input2.length);
       let len = Number(comm);
       let n = l1 + l2 - len * 2;
-      setRel(n % 7);
+      setRel(n % 6);
     }
   };
   const clearRelation = () => {
@@ -56,12 +48,17 @@ const App = () => {
       <button data-testid="clear" onClick={clearRelation}>
         Clear inputs and relationship status
       </button>
-      <h3 data-testid="answer" id="relation">
-        {arr[getrel]}
-      </h3>
+      {getrel === 6 ? (
+        <h3 data-testid="answer" id="relation">
+          Please Enter valid input
+        </h3>
+      ) : (
+        <h3 data-testid="answer" id="relation">
+          {arr[getrel]}
+        </h3>
+      )}
     </div>
   );
 };
 
 export default App;
-
