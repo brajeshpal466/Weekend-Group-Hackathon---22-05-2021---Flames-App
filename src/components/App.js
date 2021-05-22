@@ -9,7 +9,7 @@ const App =()=> {
     let input1 = document.querySelector('#inputfirst').value;
   let input2 = document.querySelector('#inputlast').value;
     if (input1 === "" || input2 === "") {
-      alert(''Please Enter valid input'');
+      alert("Please Enter valid input");
     } else {    
      input1 = input1.toLowerCase();
      input2 = input2.toLowerCase();
