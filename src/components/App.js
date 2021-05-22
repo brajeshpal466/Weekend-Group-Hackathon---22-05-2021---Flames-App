@@ -26,7 +26,7 @@ const App =()=> {
       let l1 = Number(input1.length);
       let l2 = Number(input2.length);
       let len = Number(comm);
-       let n  = l1+l2-len;
+       let n  = l1+l2-len*2;
        setRel(n%6);
     }
   }
