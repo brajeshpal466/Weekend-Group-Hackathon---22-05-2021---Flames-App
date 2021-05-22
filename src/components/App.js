@@ -2,14 +2,14 @@ import React, {Component, useState} from "react";
 import '../styles/App.css';
 
 const App =()=> {
-  var arr  = ["Siblings","Friends","Love","Affection","Marriage","Enemy" "Please Enter valid input"];
+  var arr  = ["Siblings","Friends","Love","Affection","Marriage","Enemy" ];
   const [getrel ,setRel ] = useState();
   
   const calRelation = () => {
     let input1 = document.querySelector('#inputfirst').value;
   let input2 = document.querySelector('#inputlast').value;
     if (input1 === "" || input2 === "") {
-      setRel(6);
+      console.log("Please Enter valid input");
     } else {    
      input1 = input1.toLowerCase();
      input2 = input2.toLowerCase();
